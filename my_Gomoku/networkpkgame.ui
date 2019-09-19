@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>networkPKGame</class>
+ <widget class="QMainWindow" name="networkPKGame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton:hover
+{
+	background-color: rgb(226, 127, 40);
+	border: none;
+	color: #FFF;
+	border-radius: 3px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="sendButton">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>570</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>发送</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="messageTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>530</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="messageBrowser">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>270</y>
+      <width>371</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgb(255, 147, 15);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="failButton">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>570</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>认输</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="readyButton">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>570</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>游戏准备</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="userTableWidget">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>110</y>
+      <width>371</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgb(255, 147, 15);</string>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <column>
+     <property name="text">
+      <string>用户名</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>255</red>
+       <green>255</green>
+       <blue>255</blue>
+      </color>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>IP地址</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>255</red>
+       <green>255</green>
+       <blue>255</blue>
+      </color>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_A">
+    <property name="title">
+     <string>开始（&amp;A）</string>
+    </property>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>新的一局</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/image/new.png</normaloff>:/image/new.png</iconset>
+     </property>
+     <addaction name="playerAction"/>
+     <addaction name="computerAction"/>
+     <addaction name="onlineAction"/>
+    </widget>
+    <addaction name="menu_2"/>
+    <addaction name="backAction"/>
+    <addaction name="exitAction"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>游戏（&amp;P）</string>
+    </property>
+    <addaction name="saveAction"/>
+   </widget>
+   <addaction name="menu_A"/>
+   <addaction name="menu"/>
+  </widget>
+  <action name="backAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/image/home.png</normaloff>:/image/home.png</iconset>
+   </property>
+   <property name="text">
+    <string>返回主菜单</string>
+   </property>
+  </action>
+  <action name="exitAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/image/quit.png</normaloff>:/image/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出游戏</string>
+   </property>
+  </action>
+  <action name="playerAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/image/person.png</normaloff>:/image/person.png</iconset>
+   </property>
+   <property name="text">
+    <string>玩家PK</string>
+   </property>
+  </action>
+  <action name="computerAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/image/computer.png</normaloff>:/image/computer.png</iconset>
+   </property>
+   <property name="text">
+    <string>人机PK</string>
+   </property>
+  </action>
+  <action name="onlineAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/image/net.png</normaloff>:/image/net.png</iconset>
+   </property>
+   <property name="text">
+    <string>在线PK</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/image/screenshot.png</normaloff>:/image/screenshot.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存棋局</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>exitAction</sender>
+   <signal>triggered()</signal>
+   <receiver>networkPKGame</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>549</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>0</y>
+      <width>131</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>华文细黑</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>倒计时</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="blackTime">
+       <property name="font">
+        <font>
+         <family>华文细黑</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>05-00</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <family>华文细黑</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>倒计时 </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="whiteTime">
+       <property name="font">
+        <font>
+         <family>华文细黑</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>05-00</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>850</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_A">
+    <property name="title">
+     <string>开始（&amp;A）</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>新的一局</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/image/new.png</normaloff>:/image/new.png</iconset>
+     </property>
+     <addaction name="playerPKAction"/>
+     <addaction name="computerPKAction"/>
+    </widget>
+    <addaction name="menu"/>
+    <addaction name="BackAction"/>
+    <addaction name="ExitAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_P">
+    <property name="title">
+     <string>游戏（&amp;P）</string>
+    </property>
+    <addaction name="SaveAction"/>
+   </widget>
+   <addaction name="menu_A"/>
+   <addaction name="menu_P"/>
+  </widget>
+  <action name="BackAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/home.png</normaloff>:/image/home.png</iconset>
+   </property>
+   <property name="text">
+    <string>返回主菜单</string>
+   </property>
+  </action>
+  <action name="ExitAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/quit.png</normaloff>:/image/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出游戏</string>
+   </property>
+  </action>
+  <action name="playerPKAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/person.png</normaloff>:/image/person.png</iconset>
+   </property>
+   <property name="text">
+    <string>玩家PK</string>
+   </property>
+  </action>
+  <action name="computerPKAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/computer.png</normaloff>:/image/computer.png</iconset>
+   </property>
+   <property name="text">
+    <string>人机PK</string>
+   </property>
+  </action>
+  <action name="SaveAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/screenshot.png</normaloff>:/image/screenshot.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存棋局</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>ExitAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

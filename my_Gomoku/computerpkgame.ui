@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ComputerPKGame</class>
+ <widget class="QMainWindow" name="ComputerPKGame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>655</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>655</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_A">
+    <property name="title">
+     <string>开始（&amp;A)</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>新的一局</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/image/new.png</normaloff>:/image/new.png</iconset>
+     </property>
+     <addaction name="playPKAction"/>
+     <addaction name="computerPKAction"/>
+    </widget>
+    <addaction name="menu"/>
+    <addaction name="backAction"/>
+    <addaction name="exitAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_P">
+    <property name="title">
+     <string>游戏（&amp;P）</string>
+    </property>
+    <addaction name="saveAction"/>
+   </widget>
+   <addaction name="menu_A"/>
+   <addaction name="menu_P"/>
+  </widget>
+  <action name="backAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/home.png</normaloff>:/image/home.png</iconset>
+   </property>
+   <property name="text">
+    <string>返回主菜单</string>
+   </property>
+  </action>
+  <action name="exitAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/quit.png</normaloff>:/image/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出游戏</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/screenshot.png</normaloff>:/image/screenshot.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存棋局</string>
+   </property>
+  </action>
+  <action name="playPKAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/person.png</normaloff>:/image/person.png</iconset>
+   </property>
+   <property name="text">
+    <string>玩家PK</string>
+   </property>
+  </action>
+  <action name="computerPKAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/computer.png</normaloff>:/image/computer.png</iconset>
+   </property>
+   <property name="text">
+    <string>人机PK</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>exitAction</sender>
+   <signal>triggered()</signal>
+   <receiver>ComputerPKGame</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

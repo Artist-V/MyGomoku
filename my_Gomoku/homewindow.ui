@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HomeWindow</class>
+ <widget class="QMainWindow" name="HomeWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>942</width>
+    <height>627</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget
+{
+	background-image: url(:/image/1.jpg);
+}
+
+QPushButton
+{
+	color: #606060;
+	border: solid 1px #b7b7b7;
+	background: #fff;
+	border-radius: 3px;
+}
+QPushButton:hover
+{
+	background-color: rgb(226, 127, 40);
+	border: none;
+	color: #FFF;
+	border-radius: 3px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>110</y>
+      <width>141</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>游戏玩法说明-&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>522</y>
+      <width>261</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>—— 202160614谢昕贝</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>420</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>修改个人信息</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imageLabel">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>152</y>
+      <width>561</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="res.qrc">:/image/img.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>-10</y>
+      <width>151</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>36</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>五子棋</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="computerPKButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>232</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>人机PK</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="onlinePKButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>324</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>在线PK</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="playPkButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>玩家PK</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>942</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_P">
+    <property name="title">
+     <string>开始（&amp;P）</string>
+    </property>
+    <addaction name="playAction"/>
+    <addaction name="ComputerAction"/>
+    <addaction name="OnlineAction"/>
+    <addaction name="separator"/>
+    <addaction name="HelpAction"/>
+    <addaction name="ExitAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_S">
+    <property name="title">
+     <string>设置（&amp;S）</string>
+    </property>
+    <addaction name="updateAction"/>
+   </widget>
+   <addaction name="menu_P"/>
+   <addaction name="menu_S"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>RightToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="playAction"/>
+   <addaction name="ComputerAction"/>
+   <addaction name="OnlineAction"/>
+   <addaction name="separator"/>
+   <addaction name="HelpAction"/>
+   <addaction name="ExitAction"/>
+  </widget>
+  <action name="playAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/person.png</normaloff>:/image/person.png</iconset>
+   </property>
+   <property name="text">
+    <string>玩家PK</string>
+   </property>
+  </action>
+  <action name="ComputerAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/computer.png</normaloff>:/image/computer.png</iconset>
+   </property>
+   <property name="text">
+    <string>人机PK</string>
+   </property>
+  </action>
+  <action name="OnlineAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/net.png</normaloff>:/image/net.png</iconset>
+   </property>
+   <property name="text">
+    <string>在线PK</string>
+   </property>
+  </action>
+  <action name="HelpAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/help.jpg</normaloff>:/image/help.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="ExitAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/exit.png</normaloff>:/image/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出游戏</string>
+   </property>
+  </action>
+  <action name="updateAction">
+   <property name="text">
+    <string>修改个人信息</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

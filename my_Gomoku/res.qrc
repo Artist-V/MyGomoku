@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/1.jpg</file>
+        <file>image/computer.png</file>
+        <file>image/home.png</file>
+        <file>image/net.png</file>
+        <file>image/new.png</file>
+        <file>image/person.png</file>
+        <file>image/quit.png</file>
+        <file>image/screenshot.png</file>
+        <file>sound/chessone.wav</file>
+        <file>sound/lose.wav</file>
+        <file>sound/win.wav</file>
+        <file>image/help.jpg</file>
+        <file>image/exit.png</file>
+        <file>image/img.jpg</file>
+    </qresource>
+</RCC>
